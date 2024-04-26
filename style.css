@@ -1,0 +1,137 @@
+:root{
+    --cor-principal: rgba(34, 192, 195, 0.205);
+    --cor-principal-gradiente: linear-gradient(0deg, rgba(34, 192, 195, 0.411) 0%, rgba(253, 187, 45, 0.267) 100%);
+    --green-clear:#27b98d;
+    --border-gray: rgba(255, 255, 255, 0.199);
+    --black: black;
+    --border-white: white;
+    --cor-greenDark: #29bd90;
+    --box-shadow: rgba(0,0,0,0.75);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("./assets/foto-cultura-soja.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container{
+    min-height: 100vh;
+    min-width: 100vw;
+    background: var(--cor-principal);
+    background: var(--cor-principal-gradiente);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    min-width: 60vh;
+    min-height: 70vh;
+    border: solid 2px var(--border-gray);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 21px 19px 30px -22px var(--box-shadow);
+    flex-basis:60vh;
+    backdrop-filter: blur(20px);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.titleh2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+.input{
+    width: 240px;
+    border: solid 1px var(--black);
+    border-radius: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.input:focus-visible{
+    outline: none
+}
+.input:focus{
+    border: solid 1px var(--green-clear);
+    padding: 12px;
+}
+.btn{
+    min-width: 180px;
+    max-width: 180px;
+    padding: 10px;
+    border: solid 1px var(--black);
+    border-radius: 10px;
+    align-self: center;
+}
+.btn:hover{
+    border: solid 1px var(--black);
+    cursor: pointer;
+    background-color: var(--green-clear);
+}
+.footerCard{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+a{
+    color: var(--border-white);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--cor-greenDark);
+}
+
+@media (min-width: 280px) and (max-width: 425px){
+    .container{
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+    .card{
+        min-width: 100vw;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 350px){
+    .container{
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+    .card{
+        min-width: 100vw;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+}
+
+@media (min-width: 1440px){
+    .card{
+        font-size: 30px;
+    }
+    .input{
+        font-size: 25px;
+        width: 440px;
+        min-height: 50px;
+    }
+    .btn{
+        font-size: 25px;
+        min-width: 380px;
+        max-width: 480px;
+        min-height: 50px;
+    }
+    .footerCard{
+        font-size: 25px;
+    }
+}
